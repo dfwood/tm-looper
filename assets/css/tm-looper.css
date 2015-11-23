@@ -1,0 +1,321 @@
+/* line 1, ../scss/_grid.scss */
+.grid {
+  background: white;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c3 {
+  width: 150px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c4 {
+  width: 200px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c5 {
+  width: 250px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c6 {
+  width: 300px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c7 {
+  width: 350px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c8 {
+  width: 400px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c9 {
+  width: 450px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c10 {
+  width: 500px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c11 {
+  width: 550px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c12 {
+  width: 600px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c13 {
+  width: 650px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c14 {
+  width: 700px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c15 {
+  width: 750px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c16 {
+  width: 800px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c17 {
+  width: 850px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c18 {
+  width: 900px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c19 {
+  width: 950px;
+}
+/* line 7, ../scss/_grid.scss */
+.grid.c20 {
+  width: 1000px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r2 {
+  height: 100px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r3 {
+  height: 150px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r4 {
+  height: 200px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r5 {
+  height: 250px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r6 {
+  height: 300px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r7 {
+  height: 350px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r8 {
+  height: 400px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r9 {
+  height: 450px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r10 {
+  height: 500px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r11 {
+  height: 550px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r12 {
+  height: 600px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r13 {
+  height: 650px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r14 {
+  height: 700px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r15 {
+  height: 750px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r16 {
+  height: 800px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r17 {
+  height: 850px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r18 {
+  height: 900px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r19 {
+  height: 950px;
+}
+/* line 12, ../scss/_grid.scss */
+.grid.r20 {
+  height: 1000px;
+}
+
+/* line 2, ../scss/_tiles.scss */
+.tile {
+  background: transparent;
+  box-sizing: border-box;
+  color: red;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 50px;
+  position: relative;
+  transform-origin: 50%;
+  transition: transform 0.25s ease-in-out;
+  width: 50px;
+  z-index: 1;
+}
+/* line 16, ../scss/_tiles.scss */
+.tile.changing {
+  z-index: 0;
+}
+/* line 20, ../scss/_tiles.scss */
+.tile.rot-0 {
+  transform: rotate(0deg);
+}
+/* line 24, ../scss/_tiles.scss */
+.tile.rot-1 {
+  transform: rotate(90deg);
+}
+/* line 28, ../scss/_tiles.scss */
+.tile.rot-2 {
+  transform: rotate(180deg);
+}
+/* line 32, ../scss/_tiles.scss */
+.tile.rot-3 {
+  transform: rotate(270deg);
+}
+
+/* line 38, ../scss/_tiles.scss */
+.tile-0 {
+  cursor: default;
+}
+
+/* line 43, ../scss/_tiles.scss */
+.tile-1:before {
+  background: currentColor;
+  box-sizing: content-box;
+  content: '';
+  height: 100%;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+  top: 0;
+  width: 6px;
+}
+
+/* line 60, ../scss/_tiles.scss */
+.tile-2:before, .tile-2:after,
+.tile-3 div:before,
+.tile-3 div:after,
+.tile-4 div:before,
+.tile-4 div:after,
+.tile-5:before,
+.tile-5:after {
+  background: currentColor;
+  box-sizing: content-box;
+  content: '';
+  position: absolute;
+}
+
+/* line 73, ../scss/_tiles.scss */
+.tile-2:before,
+.tile-3 div:before,
+.tile-4 div:before {
+  border-radius: 0 0 100% 0;
+  height: calc(50% + 3px);
+  left: 0;
+  top: 0;
+  width: calc(50% + 3px);
+}
+/* line 81, ../scss/_tiles.scss */
+.tile-2:after,
+.tile-3 div:after,
+.tile-4 div:after {
+  background: white;
+  border-radius: 0 0 100% 0;
+  height: calc(50% - 3px);
+  left: 0;
+  top: 0;
+  width: calc(50% - 3px);
+}
+
+/* line 95, ../scss/_tiles.scss */
+.tile-3 div:nth-child(2):before,
+.tile-4 div:nth-child(2):before {
+  border-left: 1px solid white;
+}
+/* line 99, ../scss/_tiles.scss */
+.tile-3 div:nth-child(2):before, .tile-3 div:nth-child(2):after,
+.tile-4 div:nth-child(2):before,
+.tile-4 div:nth-child(2):after {
+  border-radius: 0 0 0 100%;
+  left: auto;
+  right: 0;
+}
+
+/* line 111, ../scss/_tiles.scss */
+.tile-4 div:nth-child(3):before {
+  border-top: 1px solid white;
+}
+/* line 115, ../scss/_tiles.scss */
+.tile-4 div:nth-child(3):before, .tile-4 div:nth-child(3):after {
+  border-radius: 100% 0 0 0;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  top: auto;
+}
+/* line 125, ../scss/_tiles.scss */
+.tile-4 div:last-child:before {
+  border-right: 1px solid white;
+}
+/* line 129, ../scss/_tiles.scss */
+.tile-4 div:last-child:before, .tile-4 div:last-child:after {
+  border-radius: 0 100% 0 0;
+  bottom: 0;
+  top: auto;
+}
+
+/* line 140, ../scss/_tiles.scss */
+.tile-5:before, .tile-5:after {
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+}
+/* line 147, ../scss/_tiles.scss */
+.tile-5:before {
+  height: 25px;
+  margin-top: -12.5px;
+  margin-left: -12.5px;
+  width: 25px;
+}
+/* line 154, ../scss/_tiles.scss */
+.tile-5:after {
+  background: white;
+  height: 13px;
+  margin-top: -6.5px;
+  margin-left: -6.5px;
+  width: 13px;
+}
+/* line 162, ../scss/_tiles.scss */
+.tile-5 div {
+  background: currentColor;
+  height: 50%;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+  top: 0;
+  width: 6px;
+}
+
+/* line 174, ../scss/_tiles.scss */
+.grid.connected .tile {
+  cursor: default;
+}
+
+/*# sourceMappingURL=tm-looper.css.map */

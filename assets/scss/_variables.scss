@@ -1,0 +1,16 @@
+$line_size: 6px;
+$tile_size: 50px;
+
+$min_cols: 3;
+$max_cols: 20;
+
+$min_rows: 2;
+$max_rows: 20;
+
+$line_color: red;
+$bg_color: white;
+
+// Just some quck internal vars
+$half_line: $line_size/2;
+$end_outer: $tile_size/2;
+$end_inner: $end_outer - ($line_size * 2);

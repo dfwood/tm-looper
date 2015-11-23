@@ -1,0 +1,176 @@
+// General styles applying to all tiles
+.tile {
+  background: transparent;
+  box-sizing: border-box;
+  color: $line_color; // TODO: Move this to the colors file!
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: $tile_size;
+  position: relative;
+  transform-origin: 50%;
+  transition: transform 0.25s ease-in-out;
+  width: $tile_size;
+  z-index: 1;
+
+  &.changing {
+    z-index: 0;
+  }
+
+  &.rot-0 {
+    transform: rotate(0deg);
+  }
+
+  &.rot-1 {
+    transform: rotate(90deg);
+  }
+
+  &.rot-2 {
+    transform: rotate(180deg);
+  }
+
+  &.rot-3 {
+    transform: rotate(270deg);
+  }
+}
+
+// Empty tile
+.tile-0 {
+  cursor: default;
+}
+
+// Single line tile
+.tile-1:before {
+  background: currentColor;
+  box-sizing: content-box;
+  content: '';
+  height: 100%;
+  left: 50%;
+  margin-left: -$half_line;
+  position: absolute;
+  top: 0;
+  width: $line_size;
+}
+
+// All other tile before/after elements
+.tile-2,
+.tile-3 div,
+.tile-4 div,
+.tile-5 {
+  &:before,
+  &:after {
+    background: currentColor;
+    box-sizing: content-box;
+    content: '';
+    position: absolute;
+  }
+}
+
+// First curve on all curved tiles
+.tile-2,
+.tile-3 div,
+.tile-4 div {
+  &:before {
+    border-radius: 0 0 100% 0;
+    height: calc(50% + #{$half_line});
+    left: 0;
+    top: 0;
+    width: calc(50% + #{$half_line});
+  }
+
+  &:after {
+    background: $bg_color; // TODO: Move to colors file!
+    border-radius: 0 0 100% 0;
+    height: calc(50% - #{$half_line});
+    left: 0;
+    top: 0;
+    width: calc(50% - #{$half_line});
+  }
+}
+
+// Extra styles shared by triple and star tiles
+.tile-3,
+.tile-4 {
+  div:nth-child(2) {
+    &:before {
+      border-left: 1px solid $bg_color; // TODO: Move color to colors file!
+    }
+
+    &:before,
+    &:after {
+      border-radius: 0 0 0 100%;
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+// Remaining star tile styles
+.tile-4 {
+  div:nth-child(3) {
+    &:before {
+      border-top: 1px solid $bg_color; // TODO: Move color to colors file!
+    }
+
+    &:before,
+    &:after {
+      border-radius: 100% 0 0 0;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      top: auto;
+    }
+  }
+  div:last-child {
+    &:before {
+      border-right: 1px solid $bg_color; // TODO: Move color to colors file!
+    }
+
+    &:before,
+    &:after {
+      border-radius: 0 100% 0 0;
+      bottom: 0;
+      top: auto;
+    }
+  }
+}
+
+// End tile styles
+.tile-5 {
+  &:before,
+  &:after {
+    border-radius: 100%;
+    left: 50%;
+    top: 50%;
+  }
+
+  &:before {
+    height: $end_outer;
+    margin-top: -($end_outer/2);
+    margin-left: -($end_outer/2);
+    width: $end_outer;
+  }
+
+  &:after {
+    background: $bg_color; // TODO: Move to colors file!
+    height: $end_inner;
+    margin-top: -($end_inner/2);
+    margin-left: -($end_inner/2);
+    width: $end_inner;
+  }
+
+  div {
+    background: currentColor;
+    height: 50%;
+    left: 50%;
+    margin-left: -($line_size/2);
+    position: absolute;
+    top: 0;
+    width: $line_size;
+  }
+}
+
+// Change cursor once puzzle is solved
+.grid.connected .tile {
+  cursor: default;
+}

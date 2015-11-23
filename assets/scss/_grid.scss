@@ -1,0 +1,17 @@
+.grid {
+  // TODO: Maybe add a border?
+  background: $bg_color; // TODO: Move to colors file!
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  @for $i from $min_cols through $max_cols {
+    &.c#{$i} {
+      width: $tile_size * $i;
+    }
+  }
+  @for $i from $min_rows through $max_rows {
+    &.r#{$i} {
+      height: $tile_size * $i;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "dfwood90/tm-looper",
+  "description": "A whimsical puzzle game.",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "David Wood",
+      "email": "dfwood90@gmail.com",
+      "role": "Developer"
+    }
+  ]
+}

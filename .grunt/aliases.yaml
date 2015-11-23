@@ -1,0 +1,10 @@
+default:
+  - 'concurrent:run'
+build:
+  - 'build:js'
+  - 'build:css'
+'build:js':
+  - 'uglify:js'
+'build:css':
+  - 'sass:plugin'
+  - 'cssmin:plugin'
